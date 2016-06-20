@@ -9,8 +9,6 @@ export default Ember.Component.extend({
       var gameArray = this.get('genNumber').get('randomArray');
       console.log(gameArray);
 
-      //this.sendAction('showArray', gameArray);
-
       }
     }
 });
