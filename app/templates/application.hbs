@@ -1,3 +1,20 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="site-header">
+  <h1 id="site-title">{{#link-to 'index'}}MasterMind{{/link-to}}</h1>
+  <p id="site-subtitle">Created in Ember for JavaScript at Epicodus</p>
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-2">
+      {{#link-to 'about'}}About{{/link-to}}
+    </div>
+    <div class="col-md-2">
+      Repo
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
 
-{{outlet}}
+<div class="container">
+  {{outlet}}
+</div>
