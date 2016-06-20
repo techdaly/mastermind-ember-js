@@ -31,6 +31,28 @@
   margin-bottom: 0px;
 }
 
+#about-subtitle{
+  font-family: monospace;
+  font-size: 22px;
+  color: #3F7CFF;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+
+#about-authors a{
+  font-family: monospace;
+  font-size: 18px;
+  color: #3F7CFF;
+}
+
+#about-authors :hover,
+#about-authors :focus{
+  color: blue;
+  text-decoration: none;
+}
+
 .row{
 margin-left: auto;
 margin-right: auto;
@@ -49,4 +71,8 @@ background-color: #3F7CFF;
 .row :focus {
   text-decoration: none;
   color: yellow;
+}
+
+.container{
+  padding-top: 40px;
 }
