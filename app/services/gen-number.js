@@ -9,5 +9,4 @@ export default Ember.Service.extend({
       this.get('randomArray').push(Math.floor(Math.random() * 4));
     }
   }
-
 });
