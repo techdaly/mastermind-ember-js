@@ -4,6 +4,10 @@
 
 {{match-arrays}}
 
-{{user-guess guess='guess'}}
+{{user-guess guess='guess' checkOutput="checkOutput"}}
+
 {{peg-result}}
 {{checkResult}}
+{{#if isWinner}}
+<p> You won</p>
+{{/if}}

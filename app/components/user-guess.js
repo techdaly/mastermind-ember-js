@@ -8,7 +8,6 @@ export default Ember.Component.extend({
     guess() {
       var randomArray = this.get('genNumber').get('randomArray');
       var computerGenerator = randomArray.slice();
-      console.log("the computer Generated Array is :" + computerGenerator);
 
       var params = [];
       var output = [];
@@ -20,6 +19,11 @@ export default Ember.Component.extend({
       this.get('storingData').add(params);
 
       var userInputToArray= this.get('storingData.userNumbers').toArray();
+      if(this.get('checkUserGuess') === ["black","black","black","black"]){
+        alert("you won");
+      }
+
+
         for(var y = 0; y < computerGenerator.length; ++ y) {
           if (computerGenerator[y] === userInputToArray[y]) {
             computerGenerator.splice(y,1,null);
@@ -35,7 +39,7 @@ export default Ember.Component.extend({
           }
         }
 
-        console.log(output);
+        this.sendAction('checkOutput', output);
       }
     }
 });
