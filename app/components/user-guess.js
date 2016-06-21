@@ -3,9 +3,15 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   storingData: Ember.inject.service(),
   genNumber: Ember.inject.service(),
+  countDown: Ember.inject.service(),
+
+  userGuess: 10,
 
   actions: {
     guess() {
+      this.get('countDown').countDownGuess();
+      console.log(this.get('countDown').get('userGuess'));
+
       var randomArray = this.get('genNumber').get('randomArray');
       var computerGenerator = randomArray.slice();
 
