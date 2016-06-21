@@ -4,10 +4,10 @@ export default Ember.Component.extend({
   storingData: Ember.inject.service(),
   actions: {
     guess() {
-      var computerGenerator=["1","2","3","4"];
+      var computerGenerator=["1","2","1","4"];
       var params = [];
       var output = [];
-      // var counterCorrectGuess = 0;
+
       params.push(this.get('number0'));
       params.push(this.get('number1'));
       params.push(this.get('number2'));
@@ -16,22 +16,27 @@ export default Ember.Component.extend({
       console.log(this.get('storingData.userNumbers'));
 
       var userInputToArray= this.get('storingData.userNumbers').toArray();
-
-        for(var y =0; y < computerGenerator.length; ++y){
-          if (computerGenerator[y] === userInputToArray[y]) {
-            console.log("this is correct");
-          } else if (computerGenerator[y] !== userInputToArray[y] && userInputToArray.indexOf(computerGenerator[y])> -1){ // contained
-              console.log("this is white");
-            // counterCorrectGuess += counterCorrectGuess;
-          } else if(computerGenerator[y] !== userInputToArray[y] && userInputToArray.indexOf(computerGenerator[y]) === -1){ // not contained
-            console.log("this is NOT correct");
+        for(var y = 0; y < computerGenerator.length; ++ y) {
+          if (computerGenerator[y] === userInputToArray[y] && computerGenerator[y] != "99") {
+            computerGenerator.splice(y,1,"99");
+            userInputToArray.splice(y,1,"99");
+            output.push("black");
           }
-          // if(userInputToArray.indexOf(computerGenerator[y])> -1 ){
-          // console.log('number 0 exists in the array')
-          // break;
         }
-      }
 
+        for(var y = 0; y < computerGenerator.length; ++ y) {
+          if(userInputToArray.indexOf(computerGenerator[y])>-1 && computerGenerator[y] != "99") { // if it is in there
+
+            userInputToArray.splice(userInputToArray.indexOf(computerGenerator[y]),1,"99");
+            computerGenerator.splice(y,1,"99");
+            output.push("white");
+          }
+        }
+
+        console.log("userInputToArray : " + userInputToArray);
+        console.log("computerGenerator : " + computerGenerator);
+        console.log(output);
+
+      }
     }
-  // }
 });
