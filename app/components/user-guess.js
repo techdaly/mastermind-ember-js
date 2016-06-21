@@ -2,9 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   storingData: Ember.inject.service(),
+  genNumber: Ember.inject.service(),
+
   actions: {
     guess() {
-      var computerGenerator=[1,2,1,4];
+      var randomArray = this.get('genNumber').get('randomArray');
+      var computerGenerator = randomArray.slice();
+      console.log("the computer Generated Array is :" + computerGenerator);
+
       var params = [];
       var output = [];
 
@@ -31,7 +36,6 @@ export default Ember.Component.extend({
         }
 
         console.log(output);
-
       }
     }
 });
