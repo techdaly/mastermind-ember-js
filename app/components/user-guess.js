@@ -25,9 +25,6 @@ export default Ember.Component.extend({
       this.get('storingData').add(params);
 
       var userInputToArray= this.get('storingData.userNumbers').toArray();
-      if(this.get('checkUserGuess') === ["black","black","black","black"]){
-        alert("you won");
-      }
 
 
         for(var y = 0; y < computerGenerator.length; ++ y) {
