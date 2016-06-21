@@ -7,7 +7,7 @@ export default Ember.Component.extend({
       var computerGenerator=["1","2","3","4"];
       var params = [];
       var output = [];
-      var counterCorrectGuess = 0;
+      // var counterCorrectGuess = 0;
       params.push(this.get('number0'));
       params.push(this.get('number1'));
       params.push(this.get('number2'));
