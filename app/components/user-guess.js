@@ -13,28 +13,23 @@ export default Ember.Component.extend({
       params.push(this.get('number2'));
       params.push(this.get('number3'));
       this.get('storingData').add(params);
-      console.log(this.get('storingData.userNumbers'));
 
       var userInputToArray= this.get('storingData.userNumbers').toArray();
         for(var y = 0; y < computerGenerator.length; ++ y) {
-          if (computerGenerator[y] === userInputToArray[y] && computerGenerator[y] != "99") {
-            computerGenerator.splice(y,1,"99");
-            userInputToArray.splice(y,1,"99");
+          if (computerGenerator[y] === userInputToArray[y]) {
+            computerGenerator.splice(y,1,null);
+            userInputToArray.splice(y,1,null);
             output.push("black");
           }
         }
 
         for(var y = 0; y < computerGenerator.length; ++ y) {
-          if(userInputToArray.indexOf(computerGenerator[y])>-1 && computerGenerator[y] != "99") { // if it is in there
-
-            userInputToArray.splice(userInputToArray.indexOf(computerGenerator[y]),1,"99");
-            computerGenerator.splice(y,1,"99");
+          if(userInputToArray.indexOf(computerGenerator[y])>-1 && computerGenerator[y] != null) {
+            userInputToArray.splice(userInputToArray.indexOf(computerGenerator[y]),1,null);
             output.push("white");
           }
         }
 
-        console.log("userInputToArray : " + userInputToArray);
-        console.log("computerGenerator : " + computerGenerator);
         console.log(output);
 
       }
