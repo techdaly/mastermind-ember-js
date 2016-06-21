@@ -4,14 +4,14 @@ export default Ember.Component.extend({
   storingData: Ember.inject.service(),
   actions: {
     guess() {
-      var computerGenerator=["1","2","1","4"];
+      var computerGenerator=[1,2,1,4];
       var params = [];
       var output = [];
 
-      params.push(this.get('number0'));
-      params.push(this.get('number1'));
-      params.push(this.get('number2'));
-      params.push(this.get('number3'));
+      params.push(parseInt(this.get('number0')));
+      params.push(parseInt(this.get('number1')));
+      params.push(parseInt(this.get('number2')));
+      params.push(parseInt(this.get('number3')));
       this.get('storingData').add(params);
 
       var userInputToArray= this.get('storingData.userNumbers').toArray();
