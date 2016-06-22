@@ -1,20 +1,18 @@
 import Ember from 'ember';
 
 export function blackWhite(params) {
-  var black;
-  debugger;
-  if(params.toString() === "black"){
-    black= Ember.String.htmlSafe('<span class="glyphicon glyphicon-ok"></span>');
-  }else if (params.toString() === "black,black,black"){
-    black= Ember.String.htmlSafe('<span class="glyphicon glyphicon-ok"></span>'+'<span class="glyphicon glyphicon-ok"></span>'+'<span class="glyphicon glyphicon-ok"></span>');
-  }else if (params.toString() === "white"){
-    black= Ember.String.htmlSafe('<span class="glyphicon glyphicon-remove"></span>');
-  } else if (params.toString() === "white,white,white"){
-    black= Ember.String.htmlSafe('<span class="glyphicon glyphicon-remove"></span>'+'<span class="glyphicon glyphicon-remove"></span>'+'<span class="glyphicon glyphicon-remove"></span>');
-  }else if (params.toString() === "black,white"){
-    black= Ember.String.htmlSafe('<span class="glyphicon glyphicon-ok"></span>'+'<span class="glyphicon glyphicon-remove"></span>');
+  var black = "";
+
+  for(var i=0; i< params[0].length; ++i){
+
+    if (params[0][i] === "black"){
+      black = black + '<span class="glyphicon glyphicon-plus-sign"></span>';
+    }else if (params[0][i] === "white"){
+      black = black + '<span class="glyphicon glyphicon-minus-sign"></span>';
+    }
   }
-  return black;
+
+  return Ember.String.htmlSafe(black);
 }
 
 export default Ember.Helper.helper(blackWhite);

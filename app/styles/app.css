@@ -76,3 +76,10 @@ background-color: #3F7CFF;
 .container{
   padding-top: 40px;
 }
+
+.glyphicon-plus-sign {
+  color: black;
+}
+.glyphicon-minus-sign {
+  color: red;
+}
