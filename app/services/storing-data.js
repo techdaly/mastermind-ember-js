@@ -2,17 +2,19 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
   userNumbers: [],
-
+  pegsArray: [],
+  userGuess: [],
   add(userNumberArray) {
     this.set('userNumbers',userNumberArray);
     console.log(this.get('userNumbers'));
   },
 
-  // checkResult: Ember.computed('userNumbers.[]', function(){
-  //   if(this.get('userNumbers').indexOf('1')=== -1 ){
-  //     console.log('number 1 is not exist in the array')
-  //   }
-  //   debugger;
-  //   return "number 1 is not exist in the array";
-  // })
+  addPeg(output) {
+    this.get('pegsArray').pushObject(output);
+    // console.log("pegsArray is : " + this.get('pegsArray'));
+  },
+  addUserGuess(userInputToArray){
+    this.get('userGuess').pushObject(userInputToArray);
+  }
+
 });

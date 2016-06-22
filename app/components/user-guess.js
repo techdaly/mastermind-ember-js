@@ -41,7 +41,8 @@ export default Ember.Component.extend({
           output.push("white");
         }
       }
-
+      this.get('storingData').addUserGuess(this.get('storingData.userNumbers'));
+      this.get('storingData').addPeg(output);
       this.sendAction('checkOutput', output);
     },
     selectColor1(selection){

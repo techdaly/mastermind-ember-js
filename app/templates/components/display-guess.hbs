@@ -1,4 +1,11 @@
 <h2>Previous Guesses:</h2>
 
 <ul id="user-guesses">
+  {{#each storingData.userGuess as |guess|}}
+    <li>{{guess}}</li>
+  {{/each}}
+  {{#each storingData.pegsArray as |pegArray|}}
+    <li>{{pegArray}}</li>
+  {{/each}}
+  {{log storingData.pegsArray}}
 </ul>
