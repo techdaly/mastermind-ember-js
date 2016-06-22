@@ -77,9 +77,20 @@ background-color: #3F7CFF;
   padding-top: 40px;
 }
 
+
 .glyphicon-plus-sign {
   color: black;
 }
 .glyphicon-minus-sign {
   color: red;
+
+/**Table Styling**/
+#user-guesses {
+  border: 1px solid lightgrey;
+
+
+}
+
+#guessPadding {
+  padding-left: 10px;
 }

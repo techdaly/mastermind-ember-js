@@ -1,11 +1,20 @@
 <h2>Previous Guesses:</h2>
 
-<ul id="user-guesses">
-  {{#each storingData.userGuess as |guess|}}
-    <li>{{guess}}</li>
-  {{/each}}
-  {{#each storingData.pegsArray as |pegArray|}}
-    <li>{{black-white pegArray}}</li>
-  {{/each}}
-  {{log storingData.pegsArray}}
-</ul>
+<table style="width:50%" id="user-guesses">
+  <thead>
+      <tr>
+        <th>Your Guess</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+  <td id="guessPadding">
+    {{#each storingData.userGuess as |guess|}}
+      <tr>{{guess}}</tr>
+    {{/each}}
+  </td>
+  <td>
+    {{#each storingData.pegsArray as |pegArray|}}
+      <tr>{{black-white pegArray}}</tr>
+    {{/each}}
+  </td>
+</table>
