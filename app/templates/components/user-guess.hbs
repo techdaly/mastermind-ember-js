@@ -1,6 +1,34 @@
 <form>
 
-  <div class="form-group">
+  {{#x-select value=number0 action="selectColor1"}}
+    {{#x-option value=0}}Red{{/x-option}}
+    {{#x-option value=1}}Yellow{{/x-option}}
+    {{#x-option value=2}}Blue{{/x-option}}
+    {{#x-option value=3}}Green{{/x-option}}
+  {{/x-select}}
+
+  {{#x-select value=number1 action="selectColor2"}}
+    {{#x-option value=0}}Red{{/x-option}}
+    {{#x-option value=1}}Yellow{{/x-option}}
+    {{#x-option value=2}}Blue{{/x-option}}
+    {{#x-option value=3}}Green{{/x-option}}
+  {{/x-select}}
+
+  {{#x-select value=number2 action="selectColor3"}}
+    {{#x-option value=0}}Red{{/x-option}}
+    {{#x-option value=1}}Yellow{{/x-option}}
+    {{#x-option value=2}}Blue{{/x-option}}
+    {{#x-option value=3}}Green{{/x-option}}
+  {{/x-select}}
+
+  {{#x-select value=number3 action="selectColor4"}}
+    {{#x-option value=0}}Red{{/x-option}}
+    {{#x-option value=1}}Yellow{{/x-option}}
+    {{#x-option value=2}}Blue{{/x-option}}
+    {{#x-option value=3}}Green{{/x-option}}
+  {{/x-select}}
+
+  <!-- <div class="form-group">
     {{input id="number0" value=number0}}
   </div>
 
@@ -14,7 +42,7 @@
 
   <div class="form-group">
     {{input id="number3" value=number3}}
-  </div>
+  </div> -->
 
   <button {{action 'guess'}}>Guess</button>
 

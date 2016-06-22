@@ -36,6 +36,26 @@ export default Ember.Component.extend({
         }
 
         console.log(output);
-      }
+      },
+      selectColor1(selection){
+        if (selection) {
+          this.set('number0', selection);
+        }
+      },
+      selectColor2(selection){
+        if (selection) {
+          this.set('numbe1', selection);
+        }
+      },
+      selectColor3(selection){
+        if (selection) {
+          this.set('number2', selection);
+        }
+      },
+      selectColor4(selection){
+        if (selection) {
+          this.set('number3', selection);
+        }
+      },
     }
 });
