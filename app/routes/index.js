@@ -11,7 +11,5 @@ export default Ember.Route.extend({
         window.location.reload();
       }
     }
-
   }
-
 });

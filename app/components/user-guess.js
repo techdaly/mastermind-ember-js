@@ -42,6 +42,8 @@ export default Ember.Component.extend({
         }
       }
 
+      console.log(output);
+
       this.sendAction('checkOutput', output);
     },
     selectColor1(selection){
