@@ -27,47 +27,42 @@ export default Ember.Component.extend({
       var userInputToArray= this.get('storingData.userNumbers').toArray();
 
 
-        for(var y = 0; y < computerGenerator.length; ++ y) {
-          if (computerGenerator[y] === userInputToArray[y]) {
-            computerGenerator.splice(y,1,null);
-            userInputToArray.splice(y,1,null);
-            output.push("black");
-          }
+      for(var y = 0; y < computerGenerator.length; ++ y) {
+        if (computerGenerator[y] === userInputToArray[y]) {
+          computerGenerator.splice(y,1,null);
+          userInputToArray.splice(y,1,null);
+          output.push("black");
         }
-
-        for(var y = 0; y < computerGenerator.length; ++ y) {
-          if(userInputToArray.indexOf(computerGenerator[y])>-1 && computerGenerator[y] != null) {
-            userInputToArray.splice(userInputToArray.indexOf(computerGenerator[y]),1,null);
-            output.push("white");
-          }
-        }
-
-<<<<<<< HEAD
-        console.log(output);
-      },
-      selectColor1(selection){
-        if (selection) {
-          this.set('number0', selection);
-        }
-      },
-      selectColor2(selection){
-        if (selection) {
-          this.set('numbe1', selection);
-        }
-      },
-      selectColor3(selection){
-        if (selection) {
-          this.set('number2', selection);
-        }
-      },
-      selectColor4(selection){
-        if (selection) {
-          this.set('number3', selection);
-        }
-      },
-=======
-        this.sendAction('checkOutput', output);
       }
->>>>>>> 92d4805a763ad99125bdfdffa32b6ba357b18bfb
+
+      for(var y = 0; y < computerGenerator.length; ++ y) {
+        if(userInputToArray.indexOf(computerGenerator[y])>-1 && computerGenerator[y] != null) {
+          userInputToArray.splice(userInputToArray.indexOf(computerGenerator[y]),1,null);
+          output.push("white");
+        }
+      }
+
+      this.sendAction('checkOutput', output);
+    },
+    selectColor1(selection){
+      if (selection) {
+        this.set('number0', selection);
+      }
+    },
+    selectColor2(selection){
+      if (selection) {
+        this.set('numbe1', selection);
+      }
+    },
+    selectColor3(selection){
+      if (selection) {
+        this.set('number2', selection);
+      }
+    },
+    selectColor4(selection){
+      if (selection) {
+        this.set('number3', selection);
+      }
     }
+  }
 });
