@@ -76,3 +76,13 @@ background-color: #3F7CFF;
 .container{
   padding-top: 40px;
 }
+/**Table Styling**/
+#user-guesses {
+  border: 1px solid lightgrey;
+
+
+}
+
+#guessPadding {
+  padding-left: 10px;
+}
