@@ -3,12 +3,17 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   storingData: Ember.inject.service(),
   genNumber: Ember.inject.service(),
+  countDown: Ember.inject.service(),
+
+  userGuess: 10,
 
   actions: {
     guess() {
+      this.get('countDown').countDownGuess();
+      console.log(this.get('countDown').get('userGuess'));
+
       var randomArray = this.get('genNumber').get('randomArray');
       var computerGenerator = randomArray.slice();
-      console.log("the computer Generated Array is :" + computerGenerator);
 
       var params = [];
       var output = [];
@@ -20,6 +25,8 @@ export default Ember.Component.extend({
       this.get('storingData').add(params);
 
       var userInputToArray= this.get('storingData.userNumbers').toArray();
+
+
         for(var y = 0; y < computerGenerator.length; ++ y) {
           if (computerGenerator[y] === userInputToArray[y]) {
             computerGenerator.splice(y,1,null);
@@ -35,6 +42,7 @@ export default Ember.Component.extend({
           }
         }
 
+<<<<<<< HEAD
         console.log(output);
       },
       selectColor1(selection){
@@ -57,5 +65,9 @@ export default Ember.Component.extend({
           this.set('number3', selection);
         }
       },
+=======
+        this.sendAction('checkOutput', output);
+      }
+>>>>>>> 92d4805a763ad99125bdfdffa32b6ba357b18bfb
     }
 });
