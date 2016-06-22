@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   storingData: Ember.inject.service(),
   genNumber: Ember.inject.service(),
   countDown: Ember.inject.service(),
+  storeParams: Ember.inject.service(),
 
   userGuess: 10,
 
@@ -15,14 +16,12 @@ export default Ember.Component.extend({
       var randomArray = this.get('genNumber').get('randomArray');
       var computerGenerator = randomArray.slice();
 
-      var params = [];
+      var params = this.get('storeParams').get('serviceParams');
       var output = [];
 
-      params.push(parseInt(this.get('number0')));
-      params.push(parseInt(this.get('number1')));
-      params.push(parseInt(this.get('number2')));
-      params.push(parseInt(this.get('number3')));
       this.get('storingData').add(params);
+
+      this.get('storeParams').emptyServiceArray();
 
       var userInputToArray= this.get('storingData.userNumbers').toArray();
 
@@ -47,25 +46,25 @@ export default Ember.Component.extend({
 
       this.sendAction('checkOutput', output);
     },
-    selectColor1(selection){
-      if (selection) {
-        this.set('number0', selection);
-      }
+
+    selectRed0(value){
+      this.get('storeParams').get('serviceParams').push(value);
+      console.log(value);
     },
-    selectColor2(selection){
-      if (selection) {
-        this.set('numbe1', selection);
-      }
+
+    selectYellow1(value){
+      this.get('storeParams').get('serviceParams').push(value);
+      console.log(value);
     },
-    selectColor3(selection){
-      if (selection) {
-        this.set('number2', selection);
-      }
+
+    selectBlue2(value){
+      this.get('storeParams').get('serviceParams').push(value);
+      console.log(value);
     },
-    selectColor4(selection){
-      if (selection) {
-        this.set('number3', selection);
-      }
+
+    selectGreen3(value){
+      this.get('storeParams').get('serviceParams').push(value);
+      console.log(value);
     }
   }
 });

@@ -1,36 +1,15 @@
 <form>
 
-  {{#x-select value=number0 action="selectColor1"}}
-    {{#x-option value=0 }}Red{{/x-option}}
-    {{#x-option value=1}}Yellow{{/x-option}}
-    {{#x-option value=2}}Blue{{/x-option}}
-    {{#x-option value=3}}Green{{/x-option}}
-  {{/x-select}}
+  <button value="0" {{action 'selectRed0' 0}}>Red</button>
 
-  {{#x-select value=number1 action="selectColor2"}}
-    {{#x-option value=0}}Red{{/x-option}}
-    {{#x-option value=1}}Yellow{{/x-option}}
-    {{#x-option value=2}}Blue{{/x-option}}
-    {{#x-option value=3}}Green{{/x-option}}
-  {{/x-select}}
+  <button value="1" {{action 'selectYellow1' 1}}>Yellow</button>
 
-  {{#x-select value=number2 action="selectColor3"}}
-    {{#x-option value=0}}Red{{/x-option}}
-    {{#x-option value=1}}Yellow{{/x-option}}
-    {{#x-option value=2}}Blue{{/x-option}}
-    {{#x-option value=3}}Green{{/x-option}}
-  {{/x-select}}
+  <button value="2" {{action 'selectBlue2' 2}}>Blue</button>
 
-  {{#x-select value=number3 action="selectColor4"}}
-    {{#x-option value=0}}Red{{/x-option}}
-    {{#x-option value=1}}Yellow{{/x-option}}
-    {{#x-option value=2}}Blue{{/x-option}}
-    {{#x-option value=3}}Green{{/x-option}}
-  {{/x-select}}
+  <button value="3" {{action 'selectGreen3' 3}}>Green</button>
 
+  <br>
 
   <button {{action 'guess'}}>Guess</button>
-
-
 
 </form>
