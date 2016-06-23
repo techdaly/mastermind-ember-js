@@ -4,4 +4,5 @@ export default Ember.Component.extend({
     storingData: Ember.inject.service(),
 
     
+
 });
