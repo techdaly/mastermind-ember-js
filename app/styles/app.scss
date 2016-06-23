@@ -84,7 +84,11 @@ background-color: #3F7CFF;
 .row a{
   color: white;
 }
-
+.container {
+  background-color: lightgrey;
+  height: 100%;
+  width: 100%;
+}
 .row :hover,
 .row :focus {
   text-decoration: none;
