@@ -101,10 +101,11 @@ background-color: #3F7CFF;
 }
 .glyphicon-minus-sign {
   color: red;
+}
 
-/**Table Styling**/
-#user-guesses {
+#userGuesses {
   border: 1px solid lightgrey;
+  border-style: dashed;
 
 
 }
