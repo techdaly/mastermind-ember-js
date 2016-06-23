@@ -11,7 +11,7 @@ export function blackWhite(params) {
       black = black + '<span class="glyphicon glyphicon-minus-sign" style="color:white"></span>';
     }
   }
-
+debugger;
   return Ember.String.htmlSafe(black);
 }
 
