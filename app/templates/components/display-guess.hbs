@@ -1,19 +1,33 @@
 <div id="grey-box">
 <h2>Previous Guesses:</h2>
 
-<table style='width:100%' id="user-guesses">
+<table id="userGuesses">
+
   <thead>
     <tr>
-      <th>Your Guess</th>
-      <th>Result</th>
+      <th>Guesses</th>
+      <th id="guessPadding">Your Guess</th>
+      <th id="guessPadding">Result</th>
     </tr>
   </thead>
-  <td id="guessPadding">
+  <td id="numbers">
+    <tr>1</tr>
+    <tr>2</tr>
+    <tr>3</tr>
+    <tr>4</tr>
+    <tr>5</tr>
+    <tr>6</tr>
+    <tr>7</tr>
+    <tr>8</tr>
+    <tr>9</tr>
+    <tr>10</tr>
+  </td>
+  <td id="dataDiv">
     {{#each storingData.userGuess as |guess|}}
       <tr>{{number-color guess}}</tr>
     {{/each}}
   </td>
-  <td>
+  <td id="pegDiv">
     {{#each storingData.pegsArray as |pegArray|}}
       <tr>{{black-white pegArray}}</tr>
     {{/each}}

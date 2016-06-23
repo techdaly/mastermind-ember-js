@@ -85,7 +85,6 @@ background-color: black;
   color: white;
 }
 .container {
-  background-color: lightgrey;
   height: 100%;
   width: 100%;
 }
@@ -99,12 +98,25 @@ background-color: black;
   padding-top: 40px;
 }
 
-/*#user-guesses {
-  border: 1px solid lightgrey;
-}*/
+
+.glyphicon-plus-sign {
+  color: black;
+}
+.glyphicon-minus-sign {
+  color: red;
+}
+
+#numbers {
+  border: 1px solid black;
+  text-align: center;
+  justify-content: center;
+  padding-left: 17px;
+}
 
 #guessPadding {
   padding-left: 10px;
+  width: 50%;
+  text-align: center;
 }
 
 #circles {
@@ -121,17 +133,65 @@ background-color: black;
   align-items: center;
   justify-content: center;
   display: flex;
-  align: center;
+  // align: center;
 }
+ #ember452 {
+   float: right;
+   width: 50%;
+ }
+
 
 #ember460 {
   margin: 40px;
 }
 
 #ember452 {
-  margin: 50px;
+  margin-left: 200px;
 }
 
 #ember438 {
-  margin: 50px;
+  margin-left: 50px;
+  display: inline-block;
 }
+
+#dataDiv {
+  align-content: center;
+  justify-content: center;
+  background-color: black;
+}
+
+#dataDiv tr {
+  display: flex;
+}
+
+#dataDiv tr #circles {
+  margin: auto;
+}
+
+#pegDiv tr {
+  display: flex;
+}
+
+#pegDiv {
+  align-content: center;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+#pegDiv tr #circles {
+  margin:auto;
+}
+
+tr {
+  border-color: black;
+  height: 60px;
+  // width: 216px;
+}
+
+
+
+// #numbers {
+//   padding: 20px;
+//   height: 216px;
+//   width: 216px;
+// }

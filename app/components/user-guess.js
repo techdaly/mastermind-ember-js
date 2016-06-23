@@ -8,6 +8,8 @@ export default Ember.Component.extend({
 
   userGuess: 10,
 
+  buttonsShowing: true,
+
   actions: {
     guess() {
       this.get('countDown').countDownGuess();
@@ -48,18 +50,30 @@ export default Ember.Component.extend({
 
     selectRed0(value){
       this.get('storeParams').get('serviceParams').push(value);
+      if(this.get('storeParams').get('serviceParams').length >= 4) {
+        this.set('buttonsShowing', false);
+      }
     },
 
     selectYellow1(value){
       this.get('storeParams').get('serviceParams').push(value);
+      if(this.get('storeParams').get('serviceParams').length >= 4) {
+        this.set('buttonsShowing', false);
+      }
     },
 
     selectBlue2(value){
       this.get('storeParams').get('serviceParams').push(value);
+      if(this.get('storeParams').get('serviceParams').length >= 4) {
+        this.set('buttonsShowing', false);
+      }
     },
 
     selectGreen3(value){
       this.get('storeParams').get('serviceParams').push(value);
+      if(this.get('storeParams').get('serviceParams').length >= 4) {
+        this.set('buttonsShowing', false);
+      }
     }
   }
 });

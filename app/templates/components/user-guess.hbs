@@ -1,15 +1,17 @@
 <form class="formButtons">
 
-  <button type="button" class="btn btn-danger btn-circle btn-lg" value="0" {{action 'selectRed0' 0}}></button>
+  {{#if buttonsShowing}}
 
-  <button type="button" class="btn btn-warning btn-circle btn-lg" value="1" {{action 'selectYellow1' 1}}></button>
+    <button type="button" class="btn btn-danger btn-circle btn-lg" value="0" {{action 'selectRed0' 0}}></button>
 
-  <button type="button" class="btn btn-primary btn-circle btn-lg" value="2" {{action 'selectBlue2' 2}}></button>
+    <button type="button" class="btn btn-warning btn-circle btn-lg" value="1" {{action 'selectYellow1' 1}}></button>
 
-  <button type="button" class="btn btn-success btn-circle btn-lg" value="3" {{action 'selectGreen3' 3}}></button>
+    <button type="button" class="btn btn-primary btn-circle btn-lg" value="2" {{action 'selectBlue2' 2}}></button>
 
-  <hr>
+    <button type="button" class="btn btn-success btn-circle btn-lg" value="3" {{action 'selectGreen3' 3}}></button>
 
-  <button class="btn btn-default" {{action 'guess'}}>Guess</button>
-
+    <hr>
+{{else}}
+    <button class="btn btn-default" {{action 'guess'}}>Guess</button>
+  {{/if}}
 </form>

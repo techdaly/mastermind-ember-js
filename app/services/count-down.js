@@ -8,6 +8,7 @@ export default Ember.Service.extend({
 
     if (this.get('userGuess') === 0) {
       alert("The loser is you");
+      window.location.reload();
     }
   }
 });
