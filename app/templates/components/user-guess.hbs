@@ -1,7 +1,8 @@
 <form class="formButtons">
 
   {{#if buttonsShowing}}
-
+  <h2>Choose a Color:</h2>
+  <br>
     <button type="button" class="btn btn-danger btn-circle btn-lg" value="0" {{action 'selectRed0' 0}}></button>
 
     <button type="button" class="btn btn-warning btn-circle btn-lg" value="1" {{action 'selectYellow1' 1}}></button>
@@ -10,8 +11,8 @@
 
     <button type="button" class="btn btn-success btn-circle btn-lg" value="3" {{action 'selectGreen3' 3}}></button>
 
-    <hr>
 {{else}}
-    <button class="btn btn-default" {{action 'guess'}}>Guess</button>
+    <h3>You have chosen your colors...</h3>
+    <button class="btn btn-success" {{action 'guess'}}>Guess!</button>
   {{/if}}
 </form>

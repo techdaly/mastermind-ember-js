@@ -46,6 +46,7 @@ export default Ember.Component.extend({
       this.get('storingData').addPeg(output);
 
       this.sendAction('checkOutput', output);
+      this.set('buttonsShowing', true);
     },
 
     selectRed0(value){

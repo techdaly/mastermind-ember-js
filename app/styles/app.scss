@@ -133,14 +133,15 @@ background-color: black;
   align-items: center;
   justify-content: center;
   display: flex;
-  // align: center;
 }
- #ember452 {
-   float: right;
-   width: 50%;
- }
+ // #ember452 {
+ //   float: right;
+ //   width: 10%;
+ // }
 
-
+#ember451 {
+  width: 100%;
+}
 #ember460 {
   margin: 40px;
 }
@@ -152,6 +153,7 @@ background-color: black;
 #ember438 {
   margin-left: 50px;
   display: inline-block;
+  width: 50%;
 }
 
 #dataDiv {
@@ -187,11 +189,3 @@ tr {
   height: 60px;
   // width: 216px;
 }
-
-
-
-// #numbers {
-//   padding: 20px;
-//   height: 216px;
-//   width: 216px;
-// }

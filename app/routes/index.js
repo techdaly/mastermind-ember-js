@@ -7,7 +7,7 @@ export default Ember.Route.extend({
     checkOutput(output){
       var isWinner = ["black", "black", "black", "black"];
       if(output.toString() === isWinner.toString()){
-        alert("you won");
+        alert("YOU WIN");
         window.location.reload();
       }
     }
