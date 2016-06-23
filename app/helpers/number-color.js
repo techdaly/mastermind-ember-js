@@ -5,13 +5,13 @@ export function numberColor(params) {
 
   for(var i=0; i< params[0].length; ++i) {
     if (params[0][i] === 0 ) {
-      guessedColor = guessedColor +'<span class="glyphicon glyphicon-cd" style="color:#d9534f"></span>';
+      guessedColor = guessedColor +'<div id="circles" style="background-color:#d9534f"></div>';
     } else if (params[0][i] === 1 ) {
-      guessedColor = guessedColor +'<span class="glyphicon glyphicon-cd" style="color:#f0ad4e"></span>';
+      guessedColor = guessedColor +'<div id="circles" style="background-color:#f0ad4e"></div>';
     } else if (params[0][i] === 2 ) {
-      guessedColor = guessedColor +'<span class="glyphicon glyphicon-cd" style="color:#337ab7"></span>';
+      guessedColor = guessedColor +'<div id="circles" style="background-color:#337ab7"></div>';
     } else {
-      guessedColor = guessedColor +'<span class="glyphicon glyphicon-cd" style="color:#5cb85c"></span>';
+      guessedColor = guessedColor +'<div id="circles" style="background-color:#5cb85c"></div>';
     }
   }
 

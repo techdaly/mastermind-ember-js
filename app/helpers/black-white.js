@@ -6,12 +6,11 @@ export function blackWhite(params) {
   for(var i=0; i< params[0].length; ++i){
 
     if (params[0][i] === "black"){
-      black = black + '<span class="glyphicon glyphicon-plus-sign" style="color:black"></span>';
+      black = black + '<div id="circles" style="background-color:black"></div>';
     }else if (params[0][i] === "white"){
-      black = black + '<span class="glyphicon glyphicon-minus-sign" style="color:white"></span>';
+      black = black + '<div id="circles" style="background-color:white"></div>';
     }
   }
-debugger;
   return Ember.String.htmlSafe(black);
 }
 

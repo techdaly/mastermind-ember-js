@@ -11,7 +11,6 @@ export default Ember.Component.extend({
   actions: {
     guess() {
       this.get('countDown').countDownGuess();
-      console.log(this.get('countDown').get('userGuess'));
 
       var randomArray = this.get('genNumber').get('randomArray');
       var computerGenerator = randomArray.slice();
@@ -49,22 +48,18 @@ export default Ember.Component.extend({
 
     selectRed0(value){
       this.get('storeParams').get('serviceParams').push(value);
-      console.log(value);
     },
 
     selectYellow1(value){
       this.get('storeParams').get('serviceParams').push(value);
-      console.log(value);
     },
 
     selectBlue2(value){
       this.get('storeParams').get('serviceParams').push(value);
-      console.log(value);
     },
 
     selectGreen3(value){
       this.get('storeParams').get('serviceParams').push(value);
-      console.log(value);
     }
   }
 });

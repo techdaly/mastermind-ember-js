@@ -78,7 +78,7 @@ text-align: center;
 font-family: monospace;
 font-size: 19px;
 color: white;
-background-color: #3F7CFF;
+background-color: black;
 }
 
 .row a{
@@ -105,4 +105,33 @@ background-color: #3F7CFF;
 
 #guessPadding {
   padding-left: 10px;
+}
+
+#circles {
+  width: 25px;
+	height: 25px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+  display: inline-block;
+  margin: 3px;
+}
+
+#ember411 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align: center;
+}
+
+#ember460 {
+  margin: 40px;
+}
+
+#ember452 {
+  margin: 50px;
+}
+
+#ember438 {
+  margin: 50px;
 }
