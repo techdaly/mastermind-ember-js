@@ -9,6 +9,8 @@ export function blackWhite(params) {
       black = black + '<div id="circles" style="background-color:black"></div>';
     }else if (params[0][i] === "white"){
       black = black + '<div id="circles" style="background-color:white"></div>';
+    } else if (params[0][i] === "blue") {
+      black = black + '<div id="circles" style="background-color:lightblue"></div>';
     }
   }
   return Ember.String.htmlSafe(black);

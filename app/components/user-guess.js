@@ -39,11 +39,15 @@ export default Ember.Component.extend({
         if(userInputToArray.indexOf(computerGenerator[y])>-1 && computerGenerator[y] != null) {
           userInputToArray.splice(userInputToArray.indexOf(computerGenerator[y]),1,null);
           output.push("white");
+        } else if (userInputToArray.indexOf(computerGenerator[y])=== -1 && computerGenerator[y] != null) {
+          output.push("blue");
         }
       }
 
       this.get('storingData').addUserGuess(this.get('storingData.userNumbers'));
-      this.get('storingData').addPeg(output);
+
+        this.get('storingData').addPeg(output);
+
 
       this.sendAction('checkOutput', output);
       this.set('buttonsShowing', true);
