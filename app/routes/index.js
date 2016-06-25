@@ -22,10 +22,10 @@ export default Ember.Route.extend({
             winnerArray.push("GREEN");
           }
       }
+      alert("YOU WIN" + " THE CODE WAS: " + winnerArray);
+      window.location.reload();
      }
 
-     alert("YOU WIN" + " THE CODE WAS: " + winnerArray);
-     window.location.reload();
     }
   }
 });
